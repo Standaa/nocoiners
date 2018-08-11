@@ -25,6 +25,7 @@
     "core-js": "^2.4.1",
     "ethers": "^3.0.26",
     "font-awesome": "^4.7.0",
+    "ipfs": "^0.31.4",
     "rxjs": "^5.5.6",
     "rxjs-compat": "^6.2.2",
     "web3-typescript-typings": "^0.10.2",

@@ -12,7 +12,7 @@ const provider = providers.getDefaultProvider();
 
 
 @Injectable()
-export class AppService {
+export class LookupService {
 
   constructor(
     private http: Http
@@ -23,5 +23,11 @@ export class AppService {
     const address = provider.resolveName(`${name}.attwitter.eth`);
     return from(address);
   }
+
+  createWallet(): Observable<any> {
+    const wallet = ethers.Wallet.createRandom();
+    return of(wallet);
+  }
+
 
 }

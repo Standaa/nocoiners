@@ -1,16 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { NgModule } from '@angular/core';
-
 
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
 
-import { AppService } from './app.service';
+import { LookupService } from './ui/lookup/lookup.service';
+import { AppRoutingModule } from './/app-routing.module';
 
-
+import { SharedService } from './shared.service
 
 
 @NgModule({
@@ -19,12 +18,11 @@ import { AppService } from './app.service';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    FormsModule,
-    ReactiveFormsModule,
-    UiModule
+    RouterModule,
+    UiModule,
+    AppRoutingModule
   ],
-  providers: [ AppService ],
+  providers: [ LookupService, SharedService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

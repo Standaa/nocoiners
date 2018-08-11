@@ -1,0 +1,25 @@
+  <div class="jumbotron">
+    <h3>1 - Create your Nocoiner account</h3>
+    <p>
+      Please enter a name to check its availability.
+    </p>
+
+    <div class="ens-creation-fields">
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon2" [formControl]="form" (focusout)="form.reset()">
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">.attwitter.eth</span>
+          <span *ngIf="isLoading" class="glyphicon glyphicon-refresh spinning"></span>
+          <span *ngIf="isDomainTaken!=null && !isDomainTaken" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <span *ngIf="isDomainTaken!=null && isDomainTaken" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <button type="button" class="btn btn-primary" [disabled]="!isRegisteringAllowed" (click)="triggerWalletCreationFlow()">Register</button>
+      </div>
+
+    </div>
+
+  </div>
