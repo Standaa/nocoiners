@@ -70,7 +70,10 @@ export class LookupComponent implements OnInit {
 
   triggerWalletCreationFlow() {    
     this.lookupService.createWallet().subscribe(data => {      
-      this.sharedService.setWalletData(data);
+      this.sharedService.setWalletData(data);      
+    });
+    this.lookupService.deployENSDebtContract().subscribe(data => {
+      console.log("TRANSACTION DATA", data);
       this.router.navigate(['/wallet']);
     });
   }
