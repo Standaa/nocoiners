@@ -37,10 +37,10 @@ export class WalletComponent implements OnInit {
   }
 
   async storeEncryptedKeyIPFS() {
-    await node.files.add({
-      path: 'hello.txt',
-      content: Buffer.from('Hello World 101')
-    })
+    // await node.files.add({
+    //   path: 'hello.txt',
+    //   content: Buffer.from('Hello World 101')
+    // })
   }
 
 
