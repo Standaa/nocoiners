@@ -9,7 +9,7 @@ import { UiModule } from './ui/ui.module';
 import { LookupService } from './ui/lookup/lookup.service';
 import { AppRoutingModule } from './/app-routing.module';
 
-import { SharedService } from './shared.service
+import { SharedService } from './shared.service';
 
 
 @NgModule({
